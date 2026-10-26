@@ -7,6 +7,7 @@ import mainPy from '../../sanctum_keeper/src/sanctum_keeper/main.py?raw';
 import testLedgerPy from '../../sanctum_keeper/tests/test_ledger.py?raw';
 import requirementsTxt from '../../sanctum_keeper/requirements.txt?raw';
 import pyprojectToml from '../../sanctum_keeper/pyproject.toml?raw';
+import packageReadmeMd from '../../sanctum_keeper/README.md?raw';
 
 export interface BlueprintFile {
   id: string;
@@ -186,4 +187,19 @@ export const BLUEPRINT_FILES: BlueprintFile[] = [
       'sqlite3, queue, threading, hashlib, and pathlib rely strictly on Python 3.10+ standard library',
     ],
   },
+  {
+    id: 'README.md',
+    name: 'README.md',
+    relativePath: 'README.md',
+    category: 'Project Config & Tests',
+    subsystem: 'Repository Documentation',
+    summary:
+      'Architectural overview, three-phase atomic transaction runbook, and local setup instructions for pytest, mypy, and headless daemon execution.',
+    language: 'text',
+    content: packageReadmeMd,
+    invariants: [
+      'Matches pyproject.toml readme field for PEP 621 wheel builds',
+    ],
+  },
 ];
+

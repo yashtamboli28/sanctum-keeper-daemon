@@ -110,7 +110,7 @@ export const ProjectTreeSection: React.FC<ProjectTreeSectionProps> = ({
           </div>
 
           <div className="px-5 py-3.5 border-t border-slate-800 bg-slate-900/60 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-400">
-            <span>All 9 scaffolded files are also written to /sanctum_keeper in this workspace</span>
+            <span>All {BLUEPRINT_FILES.length} scaffolded files are also written to /sanctum_keeper in this workspace</span>
             <span className="font-mono tabular-nums text-slate-300">
               {BLUEPRINT_FILES.length} source files ready
             </span>
